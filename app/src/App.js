@@ -16,6 +16,10 @@ import imggithub from './imgs/github.png';
 import imglinkedin from './imgs/linkedin.png';
 import Title from './components/Title';
 import Paragraph from './components/Paragraph';
+import imgCardPP from './imgs/cardPP.png';
+import imgCardUX from './imgs/cardUX.png';
+import imgCardEngranaje from './imgs/cardEngranaje.png';
+import imgCardLibro from './imgs/cardLibro.png';
 //#endregion
 
 function App() {
@@ -58,16 +62,50 @@ function App() {
         </div>
       </div>
       <div style={{display: 'flex', flexDirection: 'column', alignItems: 'Left', width: '20%', marginLeft: '24%'}}>
-          <Title text='Hola! Me llamo Maxi Sher.' fontWeight='Bold'/>
-          <Paragraph text='Estoy estudiando informatica en la escuela ORT Me voy a egresar el 2024 y estoy en busca de mi primera experiencia laboral'
+        <Title text='Hola! Me llamo Maxi Sher.' fontWeight='Bold'/>
+        <Paragraph text='Estoy estudiando informatica en la escuela ORT Me voy a egresar el 2024 y estoy en busca de mi primera experiencia laboral'
            marginTop='-6px' fontSize='20px'/>
-          
-          <Paragraph text=' Mi experiencia en la metodología de trabajo escolar me permiten comunicar mis pensamientos e intenciones de una manera clara y eficiente.Además, cuento con muchas ganas de participar en proyectos que exploren tecnologías emergentes e innovadoras.'
+        <Paragraph text=' Mi experiencia en la metodología de trabajo escolar me permiten comunicar mis pensamientos e intenciones de una manera clara y eficiente. Además, cuento con muchas ganas de participar en proyectos que exploren tecnologías emergentes e innovadoras.'
           marginTop='-6px' fontSize='20px'/>
+      </div>
+      <div>
+        <Title text='Conocimientos' fontWeight='bold'/>
+        <div style={{display:'flex', justifyContent:'center', marginLeft:'-2rem'}}>
+            <ul style={{listStyle:'none', width:'70%', display: 'flex', flexDirection:'row', justifyContent:'space-between'}}>
+              <li>
+                <Img src={imgComputer} width='30%'/>
+                <Paragraph text='Maquetado Web' fontWeight='500'/>
+              </li>
+              <li>
+                <Img src={imgCloud} width='30%'/>
+                <Paragraph text='Manejo de Cloud' fontWeight='500'/>
+              </li>
+              <li>
+                <Img src={imgDesign} width='30%'/>
+                <Paragraph text='Diseño UX/UI' fontWeight='500'/>
+              </li>
+              <li>
+                <Img src={imgReact} width='30%'/>
+                <Paragraph text='Desarrollo React' fontWeight='500'/>
+              </li>
+            </ul>
         </div>
+      </div>
+      <Title text='Experiencia' fontWeight='bold'/>
+      <div style={{width:'70%', alignSelf:'center'}}>
+        <div style={{display:'flex', width:'100%', flexDirection:'row', justifyContent:'space-around'}}>
+          <Card width='28rem' title="UMAI UX Challenge" titleColor='white' srcImg={imgCardUX}
+          paragraph=''/>
+          <Card width='28rem' title="OATEC" titleColor='white' srcImg={imgCardEngranaje}/>
+        </div>
+        <br/>
+        <div style={{display:'flex', width:'100%', flexDirection:'row', justifyContent:'space-around' }}>
+          <Card width='28rem' title="Secundario ORT" titleColor='white' srcImg={imgCardLibro}/>
+          <Card width='28rem' title="Proyecto de Producción" titleColor='white' srcImg={imgCardPP}/>
+        </div>
+      </div>
       
       
-      <Card width='300px' title="Esto es una Card" titleColor='white' srcImg={imgCloud}/>
       {click = () => {
         alert("");
       }}

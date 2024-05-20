@@ -4,7 +4,8 @@ const Title = (props) => {
             backgroundColor: props.backgroundColor, 
             fontWeight: props.fontWeight, 
             fontSize: props.fontSize, 
-            marginTop: props.marginTop
+            marginTop: props.marginTop,
+            marginLeft: props.marginLeft
         }}>
             {props.text}</h1>
     )

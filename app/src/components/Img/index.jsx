@@ -6,7 +6,8 @@ const Img = (props) => {
         onClick={props.click} 
         style={{height:props.height, 
             width:props.width, 
-            borderRadius:props.borderRadius
+            borderRadius:props.borderRadius,
+            marginRight: props.marginRight
             }}/>
         </>
         
