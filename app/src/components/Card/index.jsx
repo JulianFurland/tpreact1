@@ -9,8 +9,8 @@ const Card = (props) => {
             <Title text={props.title} color={props.titleColor} fontWeight= '600' fontSize= '20px' marginLeft='10%'/>
             <Img src={props.srcImg} width='50px' height='50px' marginRight='10%'/>
             </div>
-            <div>
-                <Paragraph text={props.paragraph}/>
+            <div style={{marginLeft:"10%", width:'80%'}}>
+                <Paragraph text={props.paragraph} textAlign='justify'/>
             </div>
         </div>
     )

@@ -1,6 +1,8 @@
 const Button = (props) => {
     return (
-        <button onClick={props.click} style={{marginTop: props.marginTop,
+        <button
+            className= {props.className} 
+            onClick={props.click} style={{marginTop: props.marginTop,
             backgroundColor: props.backgroundColor,
             backgroundImage: props.backgroundImage, 
             color:props.color, 
@@ -10,7 +12,7 @@ const Button = (props) => {
             fontSize: props.fontSize, 
             fontWeight: props.fontWeight, 
             fontFamily:props.fontFamily,
-            border: props.border
+            border: props.border,
         }}
             >{props.text}</button>
     )

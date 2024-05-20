@@ -24,8 +24,8 @@ import imgCardLibro from './imgs/cardLibro.png';
 
 function App() {
   let click;
-  let textPP = "";
-  let textOrt = "";
+  let textPP = "Para mi proyecto final, junto a mis compañeros desarrollamos una aplicacion social/educativa. En el proceso de este proyecto, me especialice en diseño mobile aunque tambien trabaje mucho en el backEnd.";
+  let textOrt = "En mi tercer año de secundario elegi la orientacion de informatica, en la cual tuve muchas materias relacionadas con la tecnologia, entre ellas: Programacion, diseño web, arte digital, Estructura y funcionamiento de los sistemas, Tecnologias exponenciales, etc,";
   let textOATEC = "Durante tres meses, me embarqué en una competencia individual centrada en la implementación de tecnologías actuales en el sector agrícola. Este desafío me llevó a explorar soluciones innovadoras para una problematica desconocida hasta el momento de competir. A lo largo del proceso, enfrenté obstáculos que exigían creatividad y habilidades técnicas para encontrar soluciones efectivas. Fue una experiencia desafiante pero gratificante, que me permitió crecer profesionalmente.";
   let textUMAI = "Durante una semana, participé en una competencia enfocada en la interfaz de usuario y el trabajo en equipo. Junto con mi equipo, enfrentamos desafíos que exigieron habilidades de resolución de problemas y colaboración. Fue una experiencia intensa pero gratificante, que nos permitió demostrar nuestra capacidad para trabajar bajo presión y alcanzar resultados significativos en un corto período de tiempo.";
   return (
@@ -45,24 +45,39 @@ function App() {
           <div style={{display: 'flex', justifyContent:'space-between' ,height:'50px', width: '30%'}}>
             {
               click = () =>{
-                window.open('https://youtube.com', '_blank')
+                window.open('https://github.com/Maxisher8', '_blank')
               }
             }
-            <Img src={imggithub} width='50px' click={click}/>
-            <Img src={imginstagram} width='50px'/>
-            <Img src={imglinkedin} width='50px'/>
+            <Img src={imggithub} width='50px' click={click} className='imgLink'/>
+            {
+              click = () =>{
+                window.open('https://www.instagram.com/maxisherr', '_blank')
+              }
+            }
+            <Img src={imginstagram} width='50px' click={click} className='imgLink'/>
+            {
+              click = () =>{
+                window.open('https://ar.linkedin.com/in/maxi-sher-78321328a', '_blank')
+              }
+            }
+            <Img src={imglinkedin} width='50px' click={click} className='imgLink'/>
             
           </div>
-          <Button text='Contacto' borderRadius='1rem'
-            marginTop='20px'
-            width='170px' 
-            height='40px' 
-            backgroundImage='linear-gradient(#03b79c,#99fdac)' 
-            border='0px' 
-            fontWeight='900' 
-            fontFamily='Nunito Sans'
-            fontSize='16px'
-          />
+          <a href='#Contacto'>
+            <Button
+              className='btnContacto'
+              text='Contacto' 
+              borderRadius='1rem'
+              marginTop='20px'
+              width='170px' 
+              height='40px' 
+              backgroundImage='linear-gradient(#03b79c,#99fdac)' 
+              border='0px' 
+              fontWeight='900' 
+              fontFamily='Nunito Sans'
+              fontSize='16px'
+            />
+          </a>
         </div>
       </div>
       <div style={{display: 'flex', flexDirection: 'column', alignItems: 'Left', width: '20%', marginLeft: '24%'}}>
@@ -96,7 +111,7 @@ function App() {
         </div>
       </div>
       <Title text='Experiencia' fontWeight='bold'/>
-      <div style={{width:'70%', alignSelf:'center'}}>
+      <div style={{width:'55%', alignSelf:'center'}}>
         <div style={{display:'flex', width:'100%', flexDirection:'row', justifyContent:'space-around'}}>
           <Card width='28rem' title="UMAI UX Challenge" titleColor='white' srcImg={imgCardUX}
           paragraph={textUMAI}/>
@@ -107,14 +122,22 @@ function App() {
         <div style={{display:'flex', width:'100%', flexDirection:'row', justifyContent:'space-around' }}>
           <Card width='28rem' title="Secundario ORT" titleColor='white' srcImg={imgCardLibro}
           paragraph={textOrt}/>
-          <Card width='28rem' title="Proyecto de Producción" titleColor='white' srcImg={imgCardPP}/>
+          <Card width='28rem' title="Proyecto de Producción" titleColor='white' srcImg={imgCardPP}
+          paragraph={textPP}/>
+        </div>
+      </div>
+      <Title text='Contacto' fontWeight='bold'/>
+
+      <div style={{alignSelf:'center', display:'flex', width:'50%', flexDirection:'row', justifyContent:'space-around'}}>
+        <form style={{padding:'1rem',backgroundColor:'#00000020', borderRadius:'0.5rem', display:'flex', flexDirection:'column', justifyContent:'left'}}>
+            <Paragraph text='Nombre'/>
+            <input type='text'></input>
+        </form>
+        <div>
+
         </div>
       </div>
       
-      
-      {click = () => {
-        alert("");
-      }}
     </div>
   );
 }

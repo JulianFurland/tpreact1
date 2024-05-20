@@ -1,7 +1,9 @@
 const Img = (props) => {
     return (
         <>
-        <img src={props.src} 
+        <img 
+        src={props.src} 
+        className={props.className}
         alt={props.alt} 
         onClick={props.click} 
         style={{height:props.height, 
