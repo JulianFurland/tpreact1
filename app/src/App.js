@@ -24,6 +24,10 @@ import imgCardLibro from './imgs/cardLibro.png';
 
 function App() {
   let click;
+  let textPP = "";
+  let textOrt = "";
+  let textOATEC = "Durante tres meses, me embarqué en una competencia individual centrada en la implementación de tecnologías actuales en el sector agrícola. Este desafío me llevó a explorar soluciones innovadoras para una problematica desconocida hasta el momento de competir. A lo largo del proceso, enfrenté obstáculos que exigían creatividad y habilidades técnicas para encontrar soluciones efectivas. Fue una experiencia desafiante pero gratificante, que me permitió crecer profesionalmente.";
+  let textUMAI = "Durante una semana, participé en una competencia enfocada en la interfaz de usuario y el trabajo en equipo. Junto con mi equipo, enfrentamos desafíos que exigieron habilidades de resolución de problemas y colaboración. Fue una experiencia intensa pero gratificante, que nos permitió demostrar nuestra capacidad para trabajar bajo presión y alcanzar resultados significativos en un corto período de tiempo.";
   return (
     <div className="App" style={{display: 'flex', flexDirection: 'column'}}>
       <div style={{display: 'flex', marginLeft: '10%'}}>
@@ -95,12 +99,14 @@ function App() {
       <div style={{width:'70%', alignSelf:'center'}}>
         <div style={{display:'flex', width:'100%', flexDirection:'row', justifyContent:'space-around'}}>
           <Card width='28rem' title="UMAI UX Challenge" titleColor='white' srcImg={imgCardUX}
-          paragraph=''/>
-          <Card width='28rem' title="OATEC" titleColor='white' srcImg={imgCardEngranaje}/>
+          paragraph={textUMAI}/>
+          <Card width='28rem' title="OATEC" titleColor='white' srcImg={imgCardEngranaje}
+          paragraph={textOATEC}/>
         </div>
         <br/>
         <div style={{display:'flex', width:'100%', flexDirection:'row', justifyContent:'space-around' }}>
-          <Card width='28rem' title="Secundario ORT" titleColor='white' srcImg={imgCardLibro}/>
+          <Card width='28rem' title="Secundario ORT" titleColor='white' srcImg={imgCardLibro}
+          paragraph={textOrt}/>
           <Card width='28rem' title="Proyecto de Producción" titleColor='white' srcImg={imgCardPP}/>
         </div>
       </div>
