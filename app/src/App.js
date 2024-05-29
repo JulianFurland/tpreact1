@@ -20,6 +20,7 @@ import imgCardPP from './imgs/cardPP.png';
 import imgCardUX from './imgs/cardUX.png';
 import imgCardEngranaje from './imgs/cardEngranaje.png';
 import imgCardLibro from './imgs/cardLibro.png';
+import imgMaxi from './imgs/maxi.jpg';
 //#endregion
 
 function App() {
@@ -30,10 +31,8 @@ function App() {
   let textUMAI = "Durante una semana, participé en una competencia enfocada en la interfaz de usuario y el trabajo en equipo. Junto con mi equipo, enfrentamos desafíos que exigieron habilidades de resolución de problemas y colaboración. Fue una experiencia intensa pero gratificante, que nos permitió demostrar nuestra capacidad para trabajar bajo presión y alcanzar resultados significativos en un corto período de tiempo.";
   return (
     <div className="App" style={{display: 'flex', flexDirection: 'column'}}>
-      <div style={{display: 'flex', marginLeft: '10%'}}>
-       <Title text='Maximiliano Sher'/>
-      </div>
-      <div style={{display: 'flex', marginLeft: '10%'}}>
+      
+      <div style={{display: 'flex', marginLeft: '10%', marginTop:'5rem'}}>
         <div>
           <Img src={imgPersona} width='60rem'/>
         </div>
@@ -80,13 +79,17 @@ function App() {
           </a>
         </div>
       </div>
-      <div style={{display: 'flex', flexDirection: 'column', alignItems: 'Left', width: '20%', marginLeft: '24%'}}>
-        <Title text='Hola! Me llamo Maxi Sher.' fontWeight='Bold'/>
-        <Paragraph text='Estoy estudiando informatica en la escuela ORT Me voy a egresar el 2024 y estoy en busca de mi primera experiencia laboral'
-           marginTop='-6px' fontSize='20px'/>
-        <Paragraph text=' Mi experiencia en la metodología de trabajo escolar me permiten comunicar mis pensamientos e intenciones de una manera clara y eficiente. Además, cuento con muchas ganas de participar en proyectos que exploren tecnologías emergentes e innovadoras.'
-          marginTop='-6px' fontSize='20px'/>
+      <div style={{display:'flex'}}>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'Left', width: '20%', marginLeft: '24%'}}>
+          <Title text='Hola! Me llamo Maxi Sher.' fontWeight='Bold'/>
+          <Paragraph text='Estoy estudiando informatica en la escuela ORT Me voy a egresar el 2024 y estoy en busca de mi primera experiencia laboral'
+            marginTop='-6px' fontSize='20px'/>
+          <Paragraph text=' Mi experiencia en la metodología de trabajo escolar me permiten comunicar mis pensamientos e intenciones de una manera clara y eficiente. Además, cuento con muchas ganas de participar en proyectos que exploren tecnologías emergentes e innovadoras.'
+            marginTop='-6px' fontSize='20px'/>
+        </div>
+        <Img src={imgMaxi} borderRadius='100%' width='20%' height='20%' marginLeft='10rem' marginTop='3rem'/>
       </div>
+      
       <div>
         <Title text='Conocimientos' fontWeight='bold'/>
         <div style={{display:'flex', justifyContent:'center', marginLeft:'-2rem'}}>
@@ -128,16 +131,31 @@ function App() {
       </div>
       <Title text='Contacto' fontWeight='bold'/>
 
-      <div style={{alignSelf:'center', display:'flex', width:'50%', flexDirection:'row', justifyContent:'space-around'}}>
-        <form style={{padding:'1rem',backgroundColor:'#00000020', borderRadius:'0.5rem', display:'flex', flexDirection:'column', justifyContent:'left'}}>
-            <Paragraph text='Nombre'/>
-            <input type='text'></input>
-        </form>
-        <div>
+      <div style={{alignSelf:'center', display:'flex', width:'50%', flexDirection:'row'}}>
+        <form style={{padding:'1rem', width:'70%', backgroundColor:'#00000020', borderRadius:'0.5rem', display:'flex', flexDirection:'column'}}>
+            <Paragraph text='Nombre' textAlign='left'/>
+            <input type='text' style={{border:'1px #00000040 solid', borderRadius:'0.3rem', fontSize:'18px', fontFamily:'Segoe UI'}}></input>
+            <Paragraph text='Email' textAlign='left'/>
+            <input type='text' style={{border:'1px #00000040 solid', borderRadius:'0.3rem', fontSize:'18px', fontFamily:'Segoe UI'}}></input>
+            <Paragraph text='Mensaje' textAlign='left'/>
+            <textarea style={{resize:'none', border:'1px #00000040 solid', borderRadius:'0.3rem', paddingBottom:'3rem', fontSize:'20px', fontFamily:'Segoe UI'}}></textarea>
 
+        </form>
+        <div style={{marginLeft:'2rem', textAlign:'left'}}>
+          <Title text='Sigamos en contacto!' fontSize='22px'/>
+            <Paragraph text="Consultame lo que necesites a través del formulario o enviandome un mail a mi correo personal"/>
+            <Paragraph text="¡Gracias por visitar mi sitio web!"/>
+            <div style={{display:'flex', justifyContent:'space-between', width:'50%'}}>
+              <Paragraph text="Email: "/>
+              <Paragraph text="maxisher@gmail.com" fontWeight='bold'/>
+            </div>
         </div>
       </div>
-      
+      <footer style={{marginTop:'3rem', width:'100%', backgroundColor:'#00000020'}}>
+        <Paragraph text='Maximiliano Sher' marginTop='3rem' fontSize='24px' fontWeight='bold'/>
+        <Paragraph text='Estudiante de Informática en Secundario ORT'/>
+        <Paragraph text='©2024 Maximiliano Sher. Todos los derechos reservados' color='#00000090' fontSize='12px'/>
+      </footer>
     </div>
   );
 }

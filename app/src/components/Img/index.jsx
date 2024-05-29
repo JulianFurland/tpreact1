@@ -9,7 +9,9 @@ const Img = (props) => {
         style={{height:props.height, 
             width:props.width, 
             borderRadius:props.borderRadius,
-            marginRight: props.marginRight
+            marginTop:props.marginTop,
+            marginRight: props.marginRight,
+            marginLeft: props.marginLeft
             }}/>
         </>
         
